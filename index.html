@@ -112,12 +112,57 @@ li{border-radius:14px;margin-bottom:8px;box-shadow:0 1px 0 var(--bd)}
 .pomo .ctl button#pgo{background:var(--hero);width:100%;max-width:340px;padding:16px 0;border-radius:999px;font-size:17px}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:700;font-size:17px}
 .top button{width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:var(--card);font-size:19px;cursor:pointer}
+.cf{background:var(--card);border-radius:18px;padding:14px 16px;margin-top:14px;box-shadow:0 1px 3px rgba(11,47,58,.08)}
+.cfh{font-size:12px;letter-spacing:.06em}
+.cft{font-weight:700;font-size:17px;margin:2px 0}
+.cfb{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.cfb a,.cfb button{padding:9px 14px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit;font-size:14px;text-decoration:none;cursor:pointer}
+.cfb a.go{background:var(--hero);color:#fff;border-color:var(--hero)}
+
+:root{--kw:#0b6bcb;--sy:#a15c00;--nu:#7c3aed;--ty:#0f766e}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--kw:#6cb6ff;--sy:#f0b44c;--nu:#c4a1ff;--ty:#2dd4bf}}
+:root[data-theme="dark"]{--kw:#6cb6ff;--sy:#f0b44c;--nu:#c4a1ff;--ty:#2dd4bf}
+.cfw{display:grid;gap:14px;margin-top:14px}
+#v-code .cf{margin-top:0}
+.cfo{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.cfo select,.cfo button,.cfo a{padding:9px 14px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit;font-size:14px;text-decoration:none;cursor:pointer}
+.ed{position:relative;display:flex;height:62vh;min-height:360px;border:1px solid var(--bd);border-radius:14px;background:var(--card);overflow:hidden;font:14px/21px Consolas,"Cascadia Mono","Courier New",monospace}
+.gw{flex:none;width:46px;overflow:hidden;border-right:1px solid var(--bd);color:var(--mu)}
+.gt{margin:0;padding:12px 8px;text-align:right;font:inherit}
+.ew{position:relative;flex:1;overflow:hidden}
+.hl{position:absolute;top:0;left:0;margin:0;padding:12px;pointer-events:none;white-space:pre;font:inherit;color:var(--tx)}
+#ta{position:absolute;inset:0;width:100%;height:100%;box-sizing:border-box;margin:0;padding:12px;border:0;resize:none;background:transparent;color:transparent;caret-color:var(--tx);white-space:pre;overflow:auto;outline:none;font:inherit;tab-size:4}
+.hl .c{color:var(--mu);font-style:italic}.hl .s{color:var(--sy)}.hl .n{color:var(--nu)}.hl .k{color:var(--kw);font-weight:600}.hl .t,.hl .p{color:var(--ty)}
+.sg{position:absolute;z-index:9;min-width:170px;max-height:176px;overflow:auto;background:var(--card);border:1px solid var(--bd);border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.2);font:13px/1.2 Consolas,"Cascadia Mono",monospace;padding:4px}
+.sg div{padding:6px 8px;border-radius:6px;cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+.sg div.on{background:var(--cur)}
+.sg small{color:var(--mu);font:11px "Segoe UI",sans-serif}
+.stl{font-size:12px;margin-top:8px}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+@media(min-width:900px){
+body{padding-bottom:24px}
+.w{max-width:1200px;padding:24px;display:grid;grid-template-columns:210px minmax(0,1fr);column-gap:28px;align-items:start}
+.w>*{grid-column:2}
+.w>.tabs{grid-column:1;grid-row:1/span 30;position:sticky;top:24px;left:auto;right:auto;bottom:auto;flex-direction:column;gap:6px;padding:12px;border:1px solid var(--bd);border-radius:16px;margin:0;box-shadow:0 1px 3px rgba(11,47,58,.08)}
+.tabs button{flex-direction:row;justify-content:flex-start;gap:12px;padding:12px 14px;font-size:15px}
+.tabs button:hover{background:var(--cur)}
+.tabs button.on{background:var(--cur)}
+.top{font-size:20px}
+.hero{padding:26px}
+.pn2{font-size:38px}.hero .cd{font-size:48px}
+.pt{font-size:14px}.pt b{font-size:16px}
+.bar{bottom:12px}
+.cfw{grid-template-columns:330px minmax(0,1fr);align-items:start}
+.ed{height:calc(100vh - 210px);min-height:440px}
+.pomo{margin-top:30px}
+}
 .lk{border:1px solid var(--bd);background:var(--card);color:var(--ac);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;margin-left:8px;cursor:pointer}
 </style></head><body><div class="w">
 <div class="top"><span>Daily Routine</span><button id="th" aria-label="Switch between light and dark"></button></div>
 <div class="hero"><div class="hh"><div><small>NEXT PRAYER</small><div class="pn2" id="nm"></div><div class="cd" id="cd"></div></div><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#e3a72f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M5 21v-7a7 7 0 0 1 14 0v7M3 21h18M10 21v-4a2 2 0 0 1 4 0v4"/></svg></div><div class="pt" id="pt"></div></div>
-<div class="tabs"><button id="tb-plan" data-tab="plan" class="on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Plan</span></button><button id="tb-notes" data-tab="notes"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span>Notes</span></button><button id="tb-focus" data-tab="focus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg><span>Focus</span></button></div>
+<div class="tabs"><button id="tb-plan" data-tab="plan" class="on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Plan</span></button><button id="tb-notes" data-tab="notes"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span>Notes</span></button><button id="tb-focus" data-tab="focus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg><span>Focus</span></button><button id="tb-code" data-tab="code"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg><span>Code</span></button></div>
 <section id="v-plan">
+<div class="cf" id="cf"></div>
 <div class="days" id="days"></div>
 <div class="lab" id="lab" hidden><input type="checkbox" id="labc"><label for="labc">Communications lab this week (8:30)</label></div>
 <ul id="ls"></ul>
@@ -138,12 +183,17 @@ li{border-radius:14px;margin-bottom:8px;box-shadow:0 1px 0 var(--bd)}
 <div class="ctl"><button id="pgo">Start</button> <button id="prs">Reset</button></div>
 <p class="mu" id="pn"></p></div>
 </section>
+<section id="v-code" hidden>
+<div class="cfw"><div><div class="cf" id="cf2"></div><div class="cfo"><select id="lg" aria-label="Language"><option value="cpp">C++17</option><option value="py">Python 3</option></select><button id="tp">Template</button><button id="cp">Copy</button><a href="https://codeforces.com/problemset/submit" target="_blank" rel="noopener">Submit</a></div><div class="mu stl">Write here, copy, then submit on Codeforces. Ctrl+Space shows suggestions; Tab or Enter accepts one.</div></div>
+<div><div class="ed" id="ed"><div class="gw"><pre class="gt" id="gt"></pre></div><div class="ew"><pre class="hl" id="hl" aria-hidden="true"></pre><textarea id="ta" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" wrap="off" aria-label="Code editor"></textarea></div><div class="sg" id="sg" hidden></div></div><div class="mu stl" id="stl"></div></div></div>
+</section>
 </div>
 <script>
 const TZ="Africa/Cairo",LAT=31.2001,LNG=29.9187,R=Math.PI/180,$=s=>document.querySelector(s);
 const PN=["Fajr","Dhuhr","Asr","Maghrib","Isha"],DN=[["Sat",6],["Sun",0],["Mon",1],["Tue",2],["Wed",3],["Thu",4],["Fri",5]];
 const ld=(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}};
-const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const SK=["lab","custom","done","pdur","prounds","pcount","theme","cf","code","lang"];let SC=null,spt=0;
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}if(SC&&SK.includes(k)){clearTimeout(spt);spt=setTimeout(()=>{const o={};SK.forEach(x=>{const y=ld(x,null);if(y!==null)o[x]=y});SC.doc("state").set(o).catch(()=>{})},500)}};
 const tm=s=>{const[h,m]=s.split(":");return+h*60+ +m};
 const f=m=>{m=Math.round(m);const h=Math.floor(m/60)%24;return String(h).padStart(2,"0")+":"+String(m%60).padStart(2,"0")};
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -206,7 +256,7 @@ $("#ab").onclick=()=>{const n=$("#an").value.trim();if(!n||!$("#at").value)retur
  custom.push({dow:sel,t:tm($("#at").value),n,id:"c"+Date.now()});sv("custom",custom);$("#an").value="";render()};
 render();tick();setInterval(tick,1000);setInterval(render,30000);
 
-function show(v){["plan","notes","focus"].forEach(x=>{$("#v-"+x).hidden=x!==v;$("#tb-"+x).classList.toggle("on",x===v)})}
+function show(v){["plan","notes","focus","code"].forEach(x=>{$("#v-"+x).hidden=x!==v;$("#tb-"+x).classList.toggle("on",x===v)})}
 document.addEventListener("click",e=>{const t=e.target.closest("[data-tab]");if(t)show(t.dataset.tab)});
 const LB={focus:"Focus",short:"Short break",long:"Long break"},dk=()=>{const c=cairo();return c.y+"-"+c.m+"-"+c.d};
 let M=ld("pdur",{focus:25,short:5,long:15}),RN=ld("prounds",4),pm="focus",left=M.focus*60,run=false,endAt=0,cyc=ld("pcount",{d:"",n:0});
@@ -258,5 +308,72 @@ rn();
 function theme(t){document.documentElement.dataset.theme=t;$("#th").textContent=t==="dark"?"☀️":"🌙"}
 theme(ld("theme",null)||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));
 $("#th").onclick=()=>{const t=document.documentElement.dataset.theme==="dark"?"light":"dark";sv("theme",t);theme(t)};
+
+const CFL="4A|Watermelon|E;71A|Way Too Long Words|E;231A|Team|E;158A|Next Round|E;50A|Domino piling|E;282A|Bit++|E;112A|Petya and Strings|E;263A|Beautiful Matrix|E;339A|Helpful Maths|E;266A|Stones on the Table|E;281A|Word Capitalization|E;236A|Boy or Girl|E;116A|Tram|E;41A|Translation|E;110A|Nearly Lucky Number|E;144A|Arrival of the General|E;546A|Soldier and Bananas|E;791A|Bear and Big Brother|E;617A|Elephant|E;677A|Vanya and Fence|E;734A|Anton and Danik|E;977A|Wrong Subtraction|E;1A|Theatre Square|E;160A|Twins|E;467A|George and Accommodation|E;580A|Kefa and First Steps|E;1352A|Sum of Round Numbers|E;1398A|Bad Triangle|E;1367A|Short Substrings|E;1343A|Candies|E;1475A|Odd Divisor|E;1472B|Fair Division|E;1520A|Do Not Be Distracted!|E;1537A|Arithmetic Array|E;1360A|Minimal Square|E;1374A|Required Remainder|E;1426A|Floor Number|E;1399A|Remove Smallest|E;1527A|And Then There Were K|E;1551A|Polycarp and Coins|E;1560A|Dislike of Threes|E;1617A|Forbidden Subsequence|E;1650A|Deletions of Two Adjacent Letters|E;1703A|YES or YES?|E;1760A|Medium Number|E;1791A|Codeforces Checking|E;1296B|Food Buying|E;1339A|Filling Diamonds|E;1451A|Subtract or Divide|E;1462A|Favorite Sequence|E;1538B|Friends and Candies|E;1554A|Cherry|E;1562A|The Miracle and the Sleeper|E;1633A|Div. 7|E;230B|T-primes|M;313A|Ilya and Bank Account|M;520B|Two Buttons|M;489C|Given Length and Sum of Digits|M;455A|Boredom|M;466C|Number of Ways|M;702A|Maximum Increase|M;706B|Interesting drink|M;702B|Powers of Two|M;479C|Exams|M;580C|Kefa and Park|M;1352C|K-th Not Divisible by n|M;1472C|Long Jumps|M;1506C|Double-ended Strings|M;1506D|Epic Transformation|M;1512C|A-B Palindrome|M;1520C|Not Adjacent Matrix|M;1537B|Bad Boy|M;1481A|Space Navigation|E;1493A|Anti-knapsack|E".split(";").map(x=>x.split("|"));
+const cfu=id=>{const m=id.match(/^(\d+)(\D\d?)$/);return"https://codeforces.com/problemset/problem/"+m[1]+"/"+m[2]};
+const cfg=()=>{const c=ld("cf",{});return{solved:c.solved||{},picks:c.picks||{},days:c.days||{}}};
+function cfr(){
+ const c=cfg(),d=dk();let id=c.picks[d];
+ if(!id){const pool=CFL.filter(p=>!c.solved[p[0]]),L=pool.length?pool:CFL;let h=0;for(const ch of d)h=(h*31+ch.charCodeAt(0))>>>0;id=L[h%L.length][0];c.picks[d]=id;sv("cf",c)}
+ const p=CFL.find(x=>x[0]===id)||CFL[0],done=!!c.days[d],n=cairo(),base=Date.UTC(n.y,n.m-1,n.d);
+ let st=0;for(let i=done?0:1;;i++){const t=new Date(base-i*864e5);if(c.days[t.getUTCFullYear()+"-"+(t.getUTCMonth()+1)+"-"+t.getUTCDate()])st++;else break}
+ const H=`<div class="mu cfh">Codeforces today · ${p[2]==="M"?"Medium":"Easy"}</div><div class="cft">${esc(p[0])} · ${esc(p[1])}</div><div class="cfb"><a class="go" href="${cfu(p[0])}" target="_blank" rel="noopener">Open</a><button data-cf="done">${done?"Solved ✓":"Mark solved"}</button><button data-cf="re">Another</button></div><div class="mu">🔥 ${st}-day streak · ${Object.keys(c.solved).length} solved</div>`;$("#cf").innerHTML=H;$("#cf2").innerHTML=H;cl()}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-cf]");if(!b)return;
+ const c=cfg(),d=dk(),id=c.picks[d];
+ if(b.dataset.cf==="done"){if(c.days[d]){delete c.days[d];delete c.solved[id]}else{c.days[d]=id;c.solved[id]=1}}
+ else{const pool=CFL.filter(p=>!c.solved[p[0]]&&p[0]!==id);if(pool.length)c.picks[d]=pool[Math.floor(Math.random()*pool.length)][0]}
+ sv("cf",c);cfr()});
+function reload(){lab=ld("lab",true);custom=ld("custom",[]);M=ld("pdur",{focus:25,short:5,long:15});RN=ld("prounds",4);cyc=ld("pcount",{d:"",n:0});if(!run)left=M[pm]*60;const t=ld("theme",null);if(t)theme(t);code=ld("code",{});lg=ld("lang","cpp");$("#lg").value=lg;render();pdraw();cfr();if(document.activeElement!==ta)cl(true)}
+
+const KW={cpp:"int long short char bool float double void auto const static struct class using namespace return if else for while do break continue switch case default typedef template typename unsigned signed new delete true false nullptr sizeof public private".split(" "),py:"def class return if elif else for while in not and or is import from as pass break continue lambda try except finally with yield None True False global nonlocal del assert raise".split(" ")};
+const TY={cpp:"vector string map set unordered_map unordered_set multiset pair queue deque stack priority_queue cin cout cerr endl size_t bitset array tuple sort reverse min max abs swap lower_bound upper_bound accumulate iota memset push_back emplace_back begin end size empty insert erase find count first second getline stoi to_string sqrt pow gcd make_pair ll".split(" "),py:"print input range len int str float list dict set tuple sorted sum min max abs map open enumerate zip reversed split strip join append pop sort add remove items keys values sys stdin readline math gcd sqrt heapq deque defaultdict Counter bisect itertools".split(" ")};
+const SN={cpp:{inc:"#include <bits/stdc++.h>\nusing namespace std;\n",main:"int main() {\n    $\n    return 0;\n}",fastio:"ios::sync_with_stdio(false);\ncin.tie(nullptr);\n",tc:"int t;\ncin >> t;\nwhile (t--) {\n    $\n}",fori:"for (int i = 0; i < n; i++) {\n    $\n}",vec:"vector<int> a(n);\nfor (auto &x : a) cin >> x;\n",ll:"typedef long long ll;\n"},py:{fastio:"import sys\ninput = sys.stdin.readline\n",main:"def main():\n    $\n\nmain()",tc:"for _ in range(int(input())):\n    $",fori:"for i in range(n):\n    $",rl:"a = list(map(int, input().split()))"}};
+const ta=$("#ta"),hl=$("#hl"),gt=$("#gt"),sg=$("#sg");
+let lg=ld("lang","cpp"),code=ld("code",{}),curKey="",cand=[],ci=0,cpt=0,CW=0;
+$("#lg").value=lg;
+const tpl=()=>lg==="py"?"import sys\ninput = sys.stdin.readline\n\ndef main():\n    $\n\nmain()\n":"#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    $\n    return 0;\n}\n";
+function hi(src){const re=lg==="py"?/(#.*)|("(?:\\.|[^"\\\n])*"|'(?:\\.|[^'\\\n])*')|(@\w+)|(\b\d[\d.]*\b)|([A-Za-z_]\w*)/g:/(\/\/.*|\/\*[\s\S]*?\*\/)|("(?:\\.|[^"\\\n])*"|'(?:\\.|[^'\\\n])*')|(#\s*\w+)|(\b\d[\d.]*\b)|([A-Za-z_]\w*)/g;
+ let o="",i=0,m;while((m=re.exec(src))){o+=esc(src.slice(i,m.index));const t=m[0],c=m[1]?"c":m[2]?"s":m[3]?"p":m[4]?"n":KW[lg].includes(t)?"k":TY[lg].includes(t)?"t":"";o+=c?`<span class="${c}">${esc(t)}</span>`:esc(t);i=m.index+t.length}
+ return o+esc(src.slice(i))+"\n "}
+function sc(){hl.style.transform=`translate(${-ta.scrollLeft}px,${-ta.scrollTop}px)`;gt.style.transform=`translateY(${-ta.scrollTop}px)`}
+function pos(){const l=ta.value.slice(0,ta.selectionStart).split("\n");$("#stl").textContent=`Ln ${l.length}, Col ${l[l.length-1].length+1} · ${lg==="py"?"Python 3":"C++17"} · autosaved`}
+function refresh(){hl.innerHTML=hi(ta.value);let g="";for(let i=1,n=ta.value.split("\n").length;i<=n;i++)g+=i+"\n";gt.textContent=g;sc();pos()}
+function sav(){delete code[curKey];code[curKey]=ta.value;const ks=Object.keys(code);if(ks.length>30)delete code[ks[0]];clearTimeout(cpt);cpt=setTimeout(()=>sv("code",code),400)}
+function cl(force){const id=cfg().picks[dk()];if(!id)return;const k=id+":"+lg;if(!force&&k===curKey)return;curKey=k;ta.value=code[k]!=null?code[k]:tpl().replace("$","");refresh()}
+const cw=()=>CW||(CW=(()=>{const e=document.createElement("span");e.style.cssText="position:absolute;visibility:hidden;white-space:pre;font:"+getComputedStyle(ta).font;e.textContent="M".repeat(20);document.body.appendChild(e);const w=e.getBoundingClientRect().width/20;e.remove();return w||8.4})());
+const hide=()=>{sg.hidden=true};
+function drawS(){const v=ta.value.slice(0,ta.selectionStart).split("\n"),ed=$("#ed");
+ sg.style.left=Math.max(4,Math.min($(".gw").offsetWidth+12+(v[v.length-1].length)*cw()-ta.scrollLeft,ed.clientWidth-190))+"px";
+ sg.style.top=Math.max(4,Math.min(12+v.length*21-ta.scrollTop,ed.clientHeight-182))+"px";
+ sg.innerHTML=cand.map((x,i)=>`<div class="${i===ci?"on":""}" data-i="${i}">${esc(x.l)}${x.s?"<small>snippet</small>":""}</div>`).join("");sg.hidden=false}
+function ac(force){const m=ta.value.slice(0,ta.selectionStart).match(/[A-Za-z_]\w*$/),p=m?m[0]:"";
+ if(!force&&p.length<2){hide();return}
+ cand=[...KW[lg].map(l=>({l,t:l})),...TY[lg].map(l=>({l,t:l})),...Object.keys(SN[lg]).map(l=>({l,t:SN[lg][l],s:1}))].filter(x=>x.l!==p&&x.l.toLowerCase().startsWith(p.toLowerCase())).slice(0,8);
+ if(!cand.length){hide();return}
+ ci=0;drawS()}
+function ins(t){ta.focus();if(!document.execCommand("insertText",false,t)){ta.setRangeText(t,ta.selectionStart,ta.selectionEnd,"end");ta.dispatchEvent(new Event("input"))}}
+function acc(i){const x=cand[i];if(!x)return;const v=ta.value.slice(0,ta.selectionStart),p=(v.match(/[A-Za-z_]\w*$/)||[""])[0],ind=v.split("\n").pop().match(/^\s*/)[0];
+ ta.setSelectionRange(ta.selectionStart-p.length,ta.selectionStart);
+ let t=x.t.replace(/\n/g,"\n"+ind);const k=t.indexOf("$");t=t.replace("$","");ins(t);hide();
+ if(k>=0){const q=ta.selectionStart-(t.length-k);ta.setSelectionRange(q,q)}}
+ta.addEventListener("input",()=>{refresh();sav();ac(false)});
+ta.addEventListener("scroll",()=>{sc();hide()});
+["keyup","click"].forEach(e=>ta.addEventListener(e,pos));
+ta.addEventListener("blur",()=>setTimeout(hide,150));
+sg.addEventListener("mousedown",e=>{e.preventDefault();const d=e.target.closest("[data-i]");if(d)acc(+d.dataset.i)});
+ta.addEventListener("keydown",e=>{
+ if(!sg.hidden){if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();ci=(ci+(e.key==="ArrowDown"?1:cand.length-1))%cand.length;drawS();return}
+  if(e.key==="Enter"||e.key==="Tab"){e.preventDefault();acc(ci);return}if(e.key==="Escape"){hide();return}}
+ if(e.ctrlKey&&e.code==="Space"){e.preventDefault();ac(true);return}
+ if(e.key==="Tab"){e.preventDefault();ins("    ");return}
+ if(e.key==="Enter"){const line=ta.value.slice(0,ta.selectionStart).split("\n").pop(),ind=line.match(/^\s*/)[0],open=lg==="py"?/:\s*$/:/[{(\[]\s*$/;e.preventDefault();ins("\n"+ind+(open.test(line)?"    ":""));return}
+ if(e.ctrlKey||e.metaKey||ta.selectionStart!==ta.selectionEnd)return;
+ const P={"(":")","[":"]","{":"}",'"':'"',"'":"'"},nx=ta.value[ta.selectionStart]||"",pv=ta.value[ta.selectionStart-1]||"";
+ if(")]}\"'".includes(e.key)&&nx===e.key){e.preventDefault();ta.setSelectionRange(ta.selectionStart+1,ta.selectionStart+1);return}
+ if(P[e.key]){if((e.key==='"'||e.key==="'")&&/\w/.test(pv))return;e.preventDefault();ins(e.key+P[e.key]);ta.setSelectionRange(ta.selectionStart-1,ta.selectionStart-1)}});
+$("#lg").onchange=e=>{lg=e.target.value;sv("lang",lg);cl(true)};
+$("#tp").onclick=()=>{ta.value=tpl().replace("$","");sav();refresh()};
+$("#cp").onclick=async()=>{try{await navigator.clipboard.writeText(ta.value)}catch(e){ta.select();document.execCommand("copy")}$("#stl").textContent="Copied to clipboard"};
+cfr();
 if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script></body></html>
